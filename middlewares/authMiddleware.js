@@ -8,7 +8,7 @@ const authenticateToken = (req, res, next) => {
     }
 
     try {
-        const decoded = jwt.verify(token, 'SECRET_KEY'); 
+        const decoded = jwt.verify(token, 'SECRET_KEY'); // Reemplaza 'SECRET_KEY' con tu clave secreta
         req.user = decoded;
         next();
     } catch (error) {
